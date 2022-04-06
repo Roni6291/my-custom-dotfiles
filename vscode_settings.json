@@ -1,0 +1,50 @@
+{
+    "python.languageServer": "Pylance",
+    "editor.fontFamily": "roboto mono medium",
+    "editor.formatOnSave": true,
+    "files.trimTrailingWhitespace": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length=79",
+        "--skip-string-normalization"
+    ],
+    "python.sortImports.args": [
+        "--profile=black",
+        "--multi-line=3",
+        "--line-length=79",
+        "--trailing-comma",
+        "--star-first",
+        "--use-parentheses",
+        "--force-alphabetical-sort-within-sections",
+        "--ensure-newline-before-comments",
+        "--force-grid-wrap=0",
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.organizeImports": true
+        },
+        "editor.rulers": [
+            79,
+        ]
+    },
+    "[git-commit]": {
+        "editor.rulers": [
+            50
+        ]
+    },
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.ignorePatterns": [
+        "**/site-packages/**/*.py",
+        ".vscode/*.py"
+    ],
+    "python.linting.flake8Args": [
+        "--max-line-length=79",
+        "--ignore=E203,E303,E266,E501,E131,E133,F403",
+        "--exclude=.git,__pycache__,.pytest_cache,.mypy_cache,docs/source/conf.py,old,build,dist",
+        "--select=B,C,E,F,W,T4,B9",
+        "--max-complexity=10",
+        "--hang-closing",
+    ]
+}
